@@ -10,8 +10,12 @@ update @ 2021/11/24
 	PIN#2 (CSB) : HIGH , CSB to VDDIO : enable I2C
 	
 	PIN#5 (SDO) : GND , SDO to GND : address 1110110 (0x76)
+	
+3. porting Bosch API from https://github.com/BoschSensortec/BMP2-Sensor-API
 
-3. below is terminal read sensor log 
+	at bmp2.c , in conf_sensor API , after bmp2_soft_reset exection , add some delay , to access sensor again
+
+4. below is terminal read sensor log 
 
 ![image](https://github.com/released/M031BSP_I2C_BMP280/blob/main/log.jpg)
 
